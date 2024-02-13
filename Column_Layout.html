@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Column Layout with Average Size</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 20%);
+            grid-auto-rows: 20vh; /* Set the average height */
+            gap: 10px;
+            height: 100vh;
+        }
+
+        .column {
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .column:nth-child(1) {
+            background-color: #3498db;
+        }
+
+        .column:nth-child(2) {
+            background-color: #2ecc71;
+        }
+
+        .column:nth-child(3) {
+            background-color: #e74c3c;
+        }
+
+        .column:nth-child(4) {
+            background-color: #f39c12;
+        }
+
+        .column:nth-child(5) {
+            background-color: #9b59b6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="column">Column 1</div>
+    <div class="column">Column 2</div>
+    <div class="column">Column 3</div>
+    <div class="column">Column 4</div>
+    <div class="column">Column 5</div>
+</div>
+
+</body>
+</html>

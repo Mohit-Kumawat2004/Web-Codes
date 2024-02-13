@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input, button {
+            margin: 5px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<input type="number" id="num1" placeholder="Enter number 1">
+<input type="number" id="num2" placeholder="Enter number 2">
+
+<button onclick="calculate('add')">Add</button>
+<button onclick="calculate('subtract')">Subtract</button>
+<button onclick="calculate('multiply')">Multiply</button>
+<button onclick="calculate('divide')">Divide</button>
+
+<p>Result: <span id="result"></span></p>
+
+<script>
+    function calculate(operation) {
+        var num1 = parseFloat(document.getElementById('num1').value);
+        var num2 = parseFloat(document.getElementById('num2').value);
+        var resultElement = document.getElementById('result');
+        var result;
+
+        if (isNaN(num1) || isNaN(num2)) {
+            resultElement.textContent = 'Please enter valid numbers.';
+            return;
+        }
+
+        switch (operation) {
+            case 'add':
+                result = num1 + num2;
+                break;
+            case 'subtract':
+                result = num1 - num2;
+                break;
+            case 'multiply':
+                result = num1 * num2;
+                break;
+            case 'divide':
+                if (num2 !== 0) {
+                    result = num1 / num2;
+                } else {
+                    resultElement.textContent = 'Cannot divide by zero.';
+                    return;
+                }
+                break;
+            default:
+                resultElement.textContent = 'Invalid operation.';
+                return;
+        }
+
+        resultElement.textContent = result;
+    }
+</script>
+
+</body>
+</html>
+
+
+

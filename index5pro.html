@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style5pro.css">
+    <title>Banking Interface</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Banking Interface</h1>
+        <div id="balance">Balance: $1000</div>
+        <label for="amount">Enter Amount:</label>
+        <input type="number" id="amount" placeholder="Amount" min="0" required>
+        <button onclick="withdraw()">Withdraw</button>
+        <button onclick="deposit()">Deposit</button>
+        <button onclick="transfer()">Transfer</button>
+        <button onclick="checkBalance()">Check Balance</button>
+        <div id="message"></div>
+    </div>
+    <script src="javascript5pro.js"></script>
+</body>
+</html>
